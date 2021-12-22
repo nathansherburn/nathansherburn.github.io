@@ -1,0 +1,43 @@
+[
+  {
+    "description": "A blog outlining more than you probably wanted to know about the things that have been on my mind.",
+    "route": ["/"],
+    "scripts": [],
+    "template": "home",
+    "title": "MTYPW - More than you probably wanted"
+  },
+  {
+    "content": "src/content/important-problems.md",
+    "description": "\"What are the most important problems in your field and why aren't you working on them?\" - Richard Hamming",
+    "heading": "Important Problems",
+    "route": ["/posts/important-problems"],
+    "scripts": [],
+    "template": "post",
+    "title": "MTYPW - Important Problems"
+  },
+  {
+    "content": "src/content/supercharging-universities.md",
+    "description": "Why I think it makes sense to spend time supercharging universities.",
+    "heading": "Supercharging Universities",
+    "route": ["/posts/supercharging-universities"],
+    "scripts": [],
+    "template": "post",
+    "title": "MTYPW - Supercharging Universities"
+  },
+  {
+    "content": "src/content/eating-the-elephant.md",
+    "description": "How a small team of people can make a modest difference to the university experience.",
+    "heading": "Eating the Elephant",
+    "route": ["/posts/eating-the-elephant"],
+    "scripts": [],
+    "template": "post",
+    "title": "MTYPW - Eating the Elephant"
+  },
+  {
+    "description": "",
+    "heading": "Uh oh....",
+    "route": ["/not-found"],
+    "template": "error-page",
+    "title": "MTYPW - Not Found"
+  }
+]

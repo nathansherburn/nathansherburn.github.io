@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-padding-top: 6rem;
+  font-family: "Source Serif Pro", serif;
+  scroll-behavior: smooth;
+}
+

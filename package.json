@@ -1,0 +1,38 @@
+{
+  "name": "more-than-you-probably-wanted",
+  "version": "1.0.0",
+  "description": "More than you probably wanted - a blog where I'm writing to clarify my thinking, share ideas and gather feedback.",
+  "main": "build.js",
+  "scripts": {
+    "start": "npm run watch & npm run serve",
+    "watch": "nodemon --watch src --ext js,hbs,css,md build.js",
+    "serve": "http-server -c-1 docs & livereload docs",
+    "build": "node build.js",
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathansherburn/nathansherburn.github.io.git"
+  },
+  "author": "Nathan Sherburn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathansherburn/nathansherburn.github.io/issues"
+  },
+  "homepage": "https://github.com/nathansherburn/nathansherburn.github.io#readme",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/typography": "^0.5.0",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.11",
+    "fs-extra": "^10.0.0",
+    "gray-matter": "^4.0.2",
+    "handlebars": "^4.7.7",
+    "marked": "^2.0.1",
+    "postcss": "^8.4.3",
+    "prettier": "2.3.1",
+    "tailwindcss": "^3.0.7",
+    "template-helpers": "^1.0.1"
+  }
+}

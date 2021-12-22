@@ -1,0 +1,36 @@
+{{#> base }}
+
+<section class="mt-24 md:mt-48 mx-auto w-full px-6 prose prose-stone prose-sm sm:prose lg:prose-lg xl:prose-xl dark:prose-invert">
+  <h1 class="font-bold text-2xl">Welcome</h1>
+  <p>Hi, I'm Nathan.</p>
+  <p>I'm the Co-Founder and CEO of <a href="https://flux.qa/info">FLUX</a> - an active learning tool for
+    universities.</p>
+  <p>Welcome to <span class="italic">More Than You Probably Wanted</span> - a place where I'm writing to clarify my
+    thinking, share ideas and gather feedback.</p>
+</section>
+
+<hr class="my-12 sm:my-24 w-4/5 max-w-md mx-auto border-grey-300">
+
+<section class="mx-auto w-full px-6 max-w-prose text-sm xs:text-sm sm:text-base md:text-md lg:text-lg xl:text-xl">
+  <h1 class="font-bold text-3xl">Important Problems Series</h1>
+  <ol>
+    {{#each site as |post|}}
+    {{#if post.content}}
+    <div class="my-8">
+      <li>
+        <a href="{{post.route}}"
+           class="font-bold text-stone-900 dark:text-stone-100">
+          {{ post.heading }}
+        </a>
+        <span class="italic text-sm">
+          {{readingTime post.content}}
+        </span>
+      </li>
+      <p class="text-stone-700 dark:text-stone-300">{{ post.description }}</p>
+    </div>
+    {{/if}}
+    {{/each}}
+  </ol>
+</section>
+
+{{/base}}

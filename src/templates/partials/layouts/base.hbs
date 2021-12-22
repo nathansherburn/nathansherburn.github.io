@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+        href="/styles/main.css" />
+  <title>{{page.title}}</title>
+  {{#each page.stylesheets}}
+  <link rel="stylesheet"
+        href="{{.}}">
+  </link>
+  {{/each}}
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+        rel="stylesheet">
+  <link rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png">
+  <link rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png">
+  <link rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png">
+  <link rel="manifest"
+        href="/site.webmanifest">
+  <link rel="mask-icon"
+        href="/safari-pinned-tab.svg"
+        color="#444444">
+  <meta name="msapplication-TileColor"
+        content="#ffffff">
+  <meta name="theme-color"
+        content="#ffffff">
+
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark')
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+    }
+  </script>
+</head>
+
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-900 dark:text-stone-100">
+  {{> header }}
+
+  {{!-- This is where any other templates get inserted --}}
+  {{> @partial-block }}
+
+  {{> footer }}
+
+  <script src="//unpkg.com/alpinejs"
+          defer></script>
+  {{#each page.scripts}}
+  <script src="{{src}}"
+          crossorigin="{{crossorigin}}"
+          integrity="{{integrity}}"></script>
+  {{/each}}
+</body>
+
+</html>
