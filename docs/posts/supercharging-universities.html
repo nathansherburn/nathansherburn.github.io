@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+        href="/styles/main.css" />
+  <title>MTYPW - Supercharging Universities</title>
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+        rel="stylesheet">
+  <link rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png">
+  <link rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png">
+  <link rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png">
+  <link rel="manifest"
+        href="/site.webmanifest">
+  <link rel="mask-icon"
+        href="/safari-pinned-tab.svg"
+        color="#444444">
+  <meta name="msapplication-TileColor"
+        content="#ffffff">
+  <meta name="theme-color"
+        content="#ffffff">
+
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark')
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+    }
+  </script>
+</head>
+
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-900 dark:text-stone-100">
+  <header
+          class="fixed top-0 z-10 w-full bg-gradient-to-b from-white to-transparent dark:from-stone-900 dark:to-transparent">
+    <div
+         class="flex flex-row justify-between max-w-prose mx-auto px-6 py-4 text-sm xs:text-sm sm:text-base md:text-md lg:text-lg xl:text-xl">
+      <a href="/"
+         aria-label="MTYPW"
+         title="MTYPW"
+         class="text-2xl">
+        MTYPW
+      </a>
+      <button onclick="toggleTheme()">
+        <svg class="w-6 h-6"
+             fill="none"
+             stroke="currentColor"
+             viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <section class="my-[76px] md:my-[88px] mx-auto w-full px-6 prose prose-stone prose-sm sm:prose lg:prose-lg xl:prose-xl dark:prose-invert">
+    
+      <h2 id="supercharging-universities">
+        Supercharging Universities
+      </h2><p>In my <a href="/posts/important-problems">previous post</a>, I introduced a framework for identifying high-impact problems and teased what I believe to be a high impact problem: <em>supercharging universities</em>.</p>
+  <p>The following paragraphs summarise my thoughts on why I believe this challenge fits within the four key questions of the <a href="https://80000hours.org/make-a-difference-with-your-career/">80,000 hours framework</a>:</p>
+  <p><strong>1. Why is it an important or pressing problem?</strong></p>
+  <p>Universities have global reach, expansive infrastructure and an incredible wealth of collected talent. And whether stated explicitly or implicitly, the key goal of most universities is broadly the same: to prepare the next generation for the future ahead.</p>
+  <p>I&#39;m quite convinced by <a href="https://www.effectivealtruism.org/articles/longtermism/">longtermist arguments</a> for doing the most good you can do. And I believe that the goal of preparing students for the future ahead (along with many of the other goals universities have) cut across many, if not all, existential risks and risk factors and directly impact many areas of human flourishing.</p>
+  <p>Even if you don&#39;t buy longtermist arguments, I think there is still a strong argument to be made for universities being critical to improving the human condition for those alive today.</p>
+  <p><strong>2. How effective is our solution?</strong></p>
+  <p>Large amounts of learning and teaching is done extremely inefficiently. There are many teaching processes that waste enormous amounts of students’ and educators’ time and energy. If we can save instructors just 1% of their yearly teaching time and make the learning process just 1% more effective for students we will collectively generate enormous amounts of value.</p>
+  <p>We have good reason to believe this is possible too as there are a number of common workflows we’ve identified that are either unsupported by software, extremely clunky or prohibitively expensive.</p>
+  <p>Scaling up these evidence-based teaching practices could provide a huge amount of value to educators, students and the world they go on to influence.</p>
+  <p><strong>3. How much leverage can we apply?</strong></p>
+  <p>Software is one of the few things that can provide a huge amount of value while also being relatively easy to scale. There is probably somewhere in the vicinity of <a href="https://monitor.icef.com/2018/10/study-projects-dramatic-growth-global-higher-education-2040/">250 million</a> university students today and no reason I can see that our software shouldn’t be within the reach of every one of their instructors.</p>
+  <p><strong>4. Are we the right people to do this?</strong></p>
+  <p>I think we are the right people to work on this for two reasons:</p>
+  <ol>
+  <li>We have been lucky enough to grow up surrounded by incredibly thoughtful and intelligent people who have bought into and are working to deliver this vision.</li>
+  <li>We are all naturally curious about design, engineering, education, psychology and philosophy and, we’ve been lucky enough to spend almost 10 years thinking about and building educational software for universities.</li>
+  </ol>
+  <p>In my <a href="/posts/eating-the-elephant">next post</a> I explain what this software might actually look like.</p>
+  
+  </section>
+
+  <hr class="my-12 sm:my-24 w-4/5 max-w-md mx-auto border-grey-300">
+  
+  <footer
+          class="mx-auto w-full px-6 prose prose-stone prose-sm sm:prose lg:prose-lg xl:prose-xl my-12 sm:my-24 text-center italic dark:text-stone-200">
+    <p>Thoughts? Questions? Comments?</p>
+    <p>Send me an email <a href="mailto:nathan@flux.qa"
+         class="dark:text-stone-100">nathan@flux.qa</a></p>
+    <div class="flex justify-between my-8 w-28 mx-auto">
+      <a href="https://github.com/nathansherburn">
+        <svg width="32"
+             height="32"
+             viewBox="0 0 49 48"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_14_2)">
+            <path fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M24.8802 0C11.6202 0 0.880249 10.74 0.880249 24C0.880249 34.62 7.75025 43.59 17.2902 46.77C18.4902 46.98 18.9402 46.26 18.9402 45.63C18.9402 45.06 18.9102 43.17 18.9102 41.16C12.8802 42.27 11.3202 39.69 10.8402 38.34C10.5702 37.65 9.40025 35.52 8.38025 34.95C7.54025 34.5 6.34025 33.39 8.35025 33.36C10.2402 33.33 11.5902 35.1 12.0402 35.82C14.2002 39.45 17.6502 38.43 19.0302 37.8C19.2402 36.24 19.8702 35.19 20.5602 34.59C15.2202 33.99 9.64025 31.92 9.64025 22.74C9.64025 20.13 10.5702 17.97 12.1002 16.29C11.8602 15.69 11.0202 13.23 12.3402 9.93C12.3402 9.93 14.3502 9.3 18.9402 12.39C20.8602 11.85 22.9003 11.58 24.9403 11.58C26.9803 11.58 29.0203 11.85 30.9403 12.39C35.5303 9.27 37.5402 9.93 37.5402 9.93C38.8602 13.23 38.0202 15.69 37.7802 16.29C39.3102 17.97 40.2402 20.1 40.2402 22.74C40.2402 31.95 34.6302 33.99 29.2902 34.59C30.1602 35.34 30.9102 36.78 30.9102 39.03C30.9102 42.24 30.8802 44.82 30.8802 45.63C30.8802 46.26 31.3302 47.01 32.5302 46.77C42.0102 43.59 48.8802 34.59 48.8802 24C48.8802 10.74 38.1402 0 24.8802 0Z"
+                  fill="black"
+                  class="text-stone-900 dark:text-stone-300 fill-current" />
+          </g>
+          <defs>
+            <clipPath id="clip0_14_2">
+              <rect width="48"
+                    height="48"
+                    fill="white"
+                    transform="translate(0.880249)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+      <a href="https://twitter.com/NathanSherburn">
+        <svg width="32"
+             height="32"
+             viewBox="0 0 49 48"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_14_6)">
+            <path fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M48.8802 24C48.8802 37.2548 38.1351 48 24.8802 48C11.6254 48 0.880249 37.2548 0.880249 24C0.880249 10.7452 11.6254 0 24.8802 0C38.1351 0 48.8802 10.7452 48.8802 24ZM34.6802 16.3C35.6802 16.2 36.7802 15.9 37.6802 15.4C36.9802 16.6 36.0802 17.6 34.8802 18.6V19.3C34.8802 26.8 29.5802 35.4001 19.8802 35.4001C16.8802 35.4001 14.0802 34.4 11.7802 32.8C12.2802 32.9 12.6802 32.9001 13.0802 32.9001C15.4802 32.9001 17.7802 32 19.5802 30.5C17.2802 30.5 15.3802 28.9 14.6802 26.6C14.9802 26.7 15.3802 26.7001 15.6802 26.7001C16.1802 26.7001 16.6802 26.6 17.0802 26.5C14.6802 25.9 12.8802 23.6 12.8802 20.9V20.8C13.5802 21.2 14.3802 21.5 15.2802 21.5C13.8802 20.5 12.9802 18.8 12.9802 16.8C12.9802 15.7 13.1802 14.7 13.6802 13.9C16.2802 17.3 20.1802 19.6 24.5802 19.8C24.4802 19.4 24.4802 18.9 24.4802 18.5C24.4802 15.3 26.8802 12.8 29.7802 12.8C31.2802 12.8 32.5802 13.5 33.5802 14.6C34.8802 14.3 35.9802 13.8 36.9802 13.2C36.5802 14.5 35.7802 15.6 34.6802 16.3Z"
+                  fill="black"
+                  class="text-stone-900 dark:text-stone-300 fill-current" />
+          </g>
+          <defs>
+            <clipPath id="clip0_14_6">
+              <rect width="48"
+                    height="48"
+                    fill="white"
+                    transform="translate(0.880249)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/nathan-sherburn-b5951069/">
+        <svg width="32"
+             height="32"
+             viewBox="0 0 49 48"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_14_4)">
+            <path fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M38.3499 35.3096V25.94C38.3499 20.92 35.6698 18.584 32.097 18.584C29.2138 18.584 27.9218 20.1704 27.2018 21.2832V18.968H21.7698C21.8418 20.5016 21.7698 35.3096 21.7698 35.3096H27.2018V26.1832C27.2018 25.696 27.237 25.208 27.381 24.8592C27.773 23.8832 28.6667 22.8728 30.1667 22.8728C32.1331 22.8728 32.9186 24.3712 32.9186 26.5672V35.3104H38.3499V35.3096ZM16.0474 16.7376C17.941 16.7376 19.121 15.4816 19.121 13.9128C19.0858 12.3104 17.941 11.0904 16.0834 11.0904C14.2258 11.0904 13.0106 12.3096 13.0106 13.9128C13.0106 15.4816 14.1898 16.7376 16.013 16.7376H16.0474ZM24.8802 48C11.6258 48 0.880249 37.2544 0.880249 24C0.880249 10.7448 11.6258 0 24.8802 0C38.1347 0 48.8802 10.7448 48.8802 24C48.8802 37.2544 38.1347 48 24.8802 48ZM18.7634 35.3096V18.968H13.3322V35.3096H18.7634Z"
+                  fill="#010101"
+                  class="text-stone-900 dark:text-stone-300 fill-current" />
+          </g>
+          <defs>
+            <clipPath id="clip0_14_4">
+              <rect width="48"
+                    height="48"
+                    fill="white"
+                    transform="translate(0.880249)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+    </div>
+  </footer>
+  <script src="//unpkg.com/alpinejs"
+          defer></script>
+</body>
+
+</html>
